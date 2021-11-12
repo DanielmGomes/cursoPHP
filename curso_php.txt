@@ -1,0 +1,446 @@
+
+
+
+<!-- modulo 01 -->
+
+
+
+O que é de fato PHP
+*	Uma linguagem de programação que foi desenvolvida para deixar o HTML dinâmico
+*	Linguagem de script e open source
+*	O foco de PHP é o desenvolvimento web
+*	Os programas são executados em server side (lado do servidor backend)
+*	PHP significa personal home page (P) e hypertext prepocessor (HP)
+
+Uma breve história
+*	O criador da linguagem foi Rasmus Lerdorf
+*	O ano de lançamento foi 1994
+*	A linguagem já está na versão 8
+*	Diversas melhorias foram implementadas
+*	A ideia principal era deixar o HTML dinâmico não havia pretensão de ser o que é hoje
+*	Quase 80% dos sites hoje contém PHP
+
+O que é localhost
+*	É a forma de acessar o servidor local da nossa máquina
+*	Equivale ao IP 127.0.0.1, ou seja, nosso PC
+*	Assim podemos simular como se o site ou arquivo que estamos acessando é processado em um servidor
+*	IP significa internet protocol
+
+A sintaxe do PHP
+*	O PHP vai interpretar um bloco de código em nosso arquivo apenas se ele estiver entra as tags de PHP
+*	A abertura é: <?php
+*	O fechamento é: ?>
+*	Coloque ; a cada instrução
+*	Todo o código dentro destas tags será executado peo PHp e após isso sera impressona tela
+
+PHP e suas dependências
+*	Podemos checar com o PHP e suas dependências estão instaladas no nosso computador
+*	O nome da função é phpinfo()
+*	Ela exibe as versões também dos pacotes instalados
+*	Útil para saber como o servidor está configurado
+
+
+
+<!-- modulo 02 -->
+
+
+
+Case sensitivity
+*	Significa sensibilidade a casas maiúsculas e minúsculas
+*	Para instruções PHP não temos essa diferença ou seja: echo == ECHO
+*	Porém, para variáveis são case sensitive: $name != $NAME 
+
+Instruções de código
+*	As instruções simples de PHP são separados por ;
+*	Instruções simples são instruções de uma linha
+*	Quando há uma instrução maior, como de condição ou repetição, a definição da mesma é dada por abertura e fechamento de chaves
+*	Nestes casos, não precisaremos de ponto e vírgula
+
+Espaços em branco
+*	Para interpretação do código em PHP o espaço em branco é ignorado
+*	Isso acontece pois o mesmo é removido antes da execução
+*	A quebra de linha também é ignorada
+*	Porém se utilizada de má forma pode gerar erros inesperados no código
+
+Comentários
+*	Os comentários servem para dar informações e direções importantes de como o código funciona
+*	Iniciamos um comentário com //
+*	Todo conteúdo que está em um comentário é ignorado na execução
+*	Não insira informações sensíveis nos comentários
+*	Outra forma de inserir comentários é com #
+*	Comentários multilinhas são feitos com /* comentário */
+
+Palavras reservadas
+*	Algumas palavras são reservadas da linguagem e já tem suas funcionalidades definidas, então não podemos utilizar em nossos programas
+*	Pois caso fosse possível, poderíamos substituir a sua função original
+*	Alguns exemplos são: echo, insteadof, else, interface, namespace, pow, __DIR__, __FILE__, endif, 
+print, private, protected, and, require, public, as, break, case, for, final, switch, throw e etc
+
+
+
+<!-- modulo 03 -->
+
+
+
+Tipo de dados: inteiros (integers)
+*	Os inteiros são os números inteiros da matemática como: 1,2,15
+*	Incluindo números negativos
+*	Os números positivos não precisam de um sinal de + na frente
+*	Já os números negativos devem ser descritos assim ex: -12
+
+Checando número inteiro
+*	Podemos validar se um dado é inteiro com a função is_int()
+*	Caso um número seja inteiro, será retornado true (um outro tipo de dado)
+*	Caso não seja, receberemos um retorno de false (tipo de dado também)
+*	Precisamos utilizar uma estrutura if para validar o valor
+
+Tipo de dados: números decimais (floats)
+*	Os floats são todos os números com casas decimais
+*	Como o padrão universal é a língua inglesa, temos a separação das casas decimais com . (ponto) e não , (virgula)
+*	PHP permite a soma de números de conjuntos diferentes ex: 10 + 50.12
+*	Exemplos de floats: 2.133, 0.04, 12.8
+Checando se é float
+*	Podemos utilizar a função is_float para verificar se um dado é um float
+*	A função recebe um valor como parâmetro
+*	Novamente recebemos true or false, dependendo do dado enviado
+*	Precisamos utilizar uma estrutura if para validar o valor
+
+Tipo de dados: texto (strings)
+*	Os textos são conhecidos como strings
+*	Em PHP podemos escrever textos em aspas simples ou duplas, não há diferenã para texto puro
+*	As aspas duplas interpretam variáveis
+
+Checando se é string
+*	Podemos utilizar a função is_string() para verificar se um dados é uma string
+*	A função recebe um valor como parâmetro
+*	Novamente recebemos true or false, dependendo do dado enviado
+*	Precisamos utilizar uma estrutura if para validar o valor
+
+Tipo de dados: booleanos
+*	O boolean é um tipo de dado que só possui dois valores
+*	True: verdadeiro
+*	False: falso
+*	Alguns valores são considerados como falso: 0, 0.0, “0”, [], NULL
+
+Checando se é booleano
+*	Podemos utilizar a função is_bool() para verificar se um dado é um boolean
+*	A função recebe um valor como parâmetro
+*	Novamente receberemos true or false, dependendo do dado enviado
+*	Precisamos utilizar uma estrutura if para validar o valor
+
+Tipo de dados: array (conjunto, lista)
+*	O array é um tipo de dado que serve para agrupar um conjunto de valores
+*	Podemos inserir qualquer tipo de dado na lista
+*	A sintaxe é: [1,2,3,4,5 ...]
+*	Sempre entre [] dados separados por , (virgula)
+*	Print_r(): função para imprimir o array completo
+*	Echo $array[1]: echo pode ser usado para imprimir valores expecificos do array
+
+Tipo de dados: array associativo
+*	O array associativo é basicamente um array, porém com chave e valor
+*	A estrutura base é a mesma mas vamos construir dessa maneira
+*	$arr = [‘nome’=> ‘daniel’, ‘idade’=>26]
+*	Chave entre aspas, seta para apontar o valor
+
+Tipo de dados: objetos
+*	o PHP possui o paradigma de orientação a objetos
+*	podemos criar classes e objetos, e o objeto é considerado um tipo de dado
+*	objetos possuem métodos que são suas ações e propriedades que são características
+
+tipo de dados: null
+*	o tipo de dado null tem apenas um valor o NULL
+*	um caso de uno de null seria chacar se uma variável tem ou não valor
+*	podemos checare se um valor é null com iss_null()
+
+
+
+<!-- modulo 04 -->
+
+
+
+sobre as variáveis
+*	são a forma que temos para declarar um valor e salvá-lo na memoria
+*	uma variável em PHP tem o $ na frente do seu nome
+*	ex: $nome = ‘Daniel’;
+*	podemos salvar qualquer tipo de dado
+*	podemos alterar o valor de uma variável no decorrer do programa
+*	podemos imprimir o valor de uma variável com echo
+
+variável de variável
+*	podemos criar uma variável por meio do nome de outra variável com um valor diferente
+*	o símbolo para esta função é o $$ (cifrão duplo)
+*	$a = ‘teste’;
+*	$$x = 5;
+*	Após a execução do código, a variável teste (conteúdo de $x), será criada com o valor 
+
+Variável por referencia
+*	Podemos criar uma variável com referencia a outra
+*	O símbolo é =&
+*	Se mudamos a variável de referencia a referenciada muda o valor e ao contratrio também gera a mudança
+*	$x = 2
+*	$y =& $x
+
+Escopo
+*	Como em outras linguagens em PHP, também temos escopo de variáveis
+*	Local: variável declarada em uma função
+*	Global: variáveis declaradas fora de funções
+*	Static: variável declarada dentro da função, porem o seu valor permanece salvo entre chamadas da função
+*	Parâmetros de função: variáveis passadas para um função, podendo ser utilizadas ao longo da mesma
+
+Escopo: Variável local
+*	A variável local tem seu escopo definido dentro de uma função
+*	Ela não é acessível fora da mesma
+*	O seu valor sempre é resetado quando a função é finalizada
+
+Escopo: varialvel global
+*	A principal característica da variável global é ser declarada fora de funções
+*	Por comportamento padrão não são acessíveis dentro de funções
+*	Precisamos utilizar a palavra global para isso
+*	Essa função de variável global não ser acessível dentro de funções previne muitos problemas no software
+*	Para acessar variável global dentro de local, usar função global ex: global $teste;
+
+Escopo: variavel estática
+*	A variável estática é declarada com a instrução static
+*	O valor da mesma é mantido e alterado a cada execução de uma função
+*	É interessante esse comportamento pois as variáveis de escopo local sempre são resetadas
+
+Escopo: parâmetros de função
+*	Os parâmetros de função também são considerados tipos de variáveis
+*	Este recurso nos ajuda a criar funções com valores dinâmicos
+*	Podendo alterá-los a cada invocação da mesma
+*	Podemos passar mais de um parâmetro para uma função
+
+
+
+<!-- modulo 05 -->
+
+
+
+O que é uma expressão?
+*	Uma instrução de código que sera avaliada e resultara em um valor
+*	Uma simples impressão de um texto é uma expressão
+*	Uma soma ou operação matemática mais complexa tambe
+*	Na programaão realizaremos diversas expressões durante nosso código para formar nosso software
+
+o que é um operador?
+*	operadores são recursos que utilizamos para compor expressões mais complexas
+*	alguns deles são: +, -, **, / , ++, >, <, >=, <= e etc...
+*	estas operações podem ser matemáticas ou até mesmo comparações
+*	a ideia principal é que um novo valor é gerado ou também um booleano pode ser retornado
+
+ordem dos operadores
+*	o PHP e as linguages de programação executam os operadores na mesma ordem que na matemática
+*	ou seja em: 2 + 2 * 4, teremos o resultado de 10
+*	mesmo que a primeira operação seja soma
+*	podemos utilizar () para separar operações
+
+mudança de tipo implicito
+*	o PHP em certas operações, muda o tipo de dado de forma implicita
+*	por exemplo: 5 / 2 = 2.5 (gera um float)
+*	e 5.5 resulta em 55 (gera uma string) o . (ponto é o operador de concatenação)
+*	por isso, temos que tomar cuidado com algumas expressões que podem gerar resultados indesejados
+*	este recurso é chamado e auto cast
+
+operadores aritméticos
+*	temos os operadores básicos da matemática em PHP
+*	soma: +
+*	subtração: -
+*	divisão: /
+*	multiplicãção: *
+
+operador de modulo
+*	o operador de modulo é inserido no código pelo simbolo de %
+*	sua função é realizar uma divisão
+*	mas como resultado ele apresenta apenas o resto da mesma
+
+operador de exponenciação
+*	podemos realizar o calculo de potencia com o simbolo **
+*	exemplo: 5 ** 2;
+*	desta maneira, teremos o resultado de 5 elevado a 2
+
+operador de concatenação
+*	em PHP, podemos concatenar valores com . (ponto)
+*	concatenar, é o ato de juntar vários textos e/ou números em apenas uma string
+*	não há limites de quantas express~~oes podem ser concatenadas
+
+auto incremento e auto decremento
+*	podemos incrementar um valor ou decrementar com os operadores: ++ e --
+*	exemplo: $n++ ou $n--
+*	onde n é uma variavel e terá sei valor alterado com +1 e -1
+*	estes operadores são muito utilizados em estruturas de repetição
+
+operadores de comparação
+*	as operações com operadores de comparação resultarão em true or false
+*	igualdade: ==
+*	identico a: ===
+*	diferença: !=
+*	não identico a: !==
+*	maior: >
+*	maior igual: >=
+*	menor: <
+*	menor igual: <=
+
+operador de igualdade
+*	com o operador de igualdade, verificamos se um valor é igual ao outro
+*	o simbolo é: ==
+*	ex: 1 == 1: true / 1 == 2: false
+
+operador idêntico a
+*	com o operador idÊntico a verificamos se um valor é igual ao outro avaliamos o seu tipo também
+*	o simbolo é: ===
+*	exemplo: 5 === 5; true
+*	exemplo: 3 === "3"; false
+
+operador de diferença
+*	com o operador de diferença, verificamos se um valor é diferente de outro
+*	o sumbolo é: !=
+*	exemplo: 5 != 5; false
+*	exemplo: 10!= 5; true
+
+operador não identico a
+*	com o operador não identico a verificamos se um valor é diferente de outro avaliando o seu tipo também
+*	o simbolo é: !==
+*	exemplo: 5 !== 4; false
+*	exemplo: 3 !== "3"; true
+
+operador maior e maior ou igual
+*	com o operador maior que, verificamos se um valor é maior que outro
+*	o simbolo é: >
+*	exemplo: 5 > 4; true
+*	com o operador maior ou igual a, verificamos se um valor é maior ou igual a outro
+*	o simbolo é: >=
+*	exemplo: 5 >= 5; true  
+
+operador menor e menor ou igual
+*	com o operador menor que, verificamos se um valor é menor que outro
+*	o simbolo é: <
+*	exemplo: 5 < 4; false
+*	com o operador menor ou igual a, verificamos se um valor é menor ou igual a outro
+*	o simbolo é: <=
+*	exemplo: 11 <= 12; true
+
+operadores lógicos
+*	com os operadores lógicos podemos encadear várias comparações
+*	operador and: &&
+*	operador or: ||
+*	operador not !
+
+tabela verdade
+*	com a tabela verdade, temos um resumo dos operadores lógicos
+
+-- NOT --		------ AND -------		---------- OR ---------			
+x	|	x		x	|	Y    |	XY		x   |	Y   |	X + Y                                                                                                                          
+---------		------------------		-----------------------
+0	|	1		0	|	0	|	0		0	|	0	|	  0		
+---------		------------------		-----------------------
+1	|	0		0	|	1	|	0		0	|	1	|	  1
+---------		------------------		-----------------------
+1	|	1		1	|	1	|	0		1	|	0	|	  1
+				------------------		-----------------------
+				1	|	1	|	1		1	|	1	|	  1
+
+operador lógico AND (E)
+*	os operadores lógicos em conjunto dos de comparação, também retornam um booleano (true or false)
+*	no caso de AND temos true apenas quando as duas comparações são verdadeiras
+*	simbolo && 
+*	exemplo: 5 > 5 && 10 < 100; true
+
+operador lógico OR (OU)
+*	o operador lógico OR resulta em verdadeiro caso qualquer um dos lados da operação seja verdadeiro
+*	e só resulta em falso caso os dois lados sejam falsos
+*	símbolo: ||
+*	exemplo: 5 > 15 || 'teste' == 'teste'; true
+
+operador lógico NOT
+*	o operador lógico NOT, apenas inverte o resultado booleano de uma operação se é true vira false e se é false vira true
+*	simbolo: !
+*	exemplo: !true; false
+*	exemplo: !(5 > 2); false
+
+operadores de conversão (cast)
+*	com os operadores de conversão, podemos forçar uma variável ser de um determinado tipo
+*	nem todos são uteis, os mais utilizados são para converter uma string em número
+*	operadores: int, bool, float, string, array, object e unset
+*	exemplo: $a = (float) '5.34243'; string é convertida para float
+
+operadores de atribuição
+*	com estes operadores podemos atribuir valor a uma variavel
+*	o mais conhecido é o = porém, temos algumas variações do mesmo
+*	operadores: +=, -=, /=, *= e %=
+*	cada um destes fará uma operação antes da atribuição
+
+operador ternário
+*	este operador constitui uma estrutura de condição resumida
+*	na maioria dos casos vamos optar por if/else
+*	porém, em situações simples, podemos utilizar o ternário
+*	exemplo: 5 > 2 ? "5 é maior que dois"; echo "5 é maior que 2"
+*	a primeira interrogação vem antes da comparação
+*	e o : (dois pontos) para uma segunda situação, caso a primeira seja falsa
+
+
+
+<!-- modulo 06 -->
+
+
+
+estrutura if
+*	a estrutura if checa se uma expressão é verdadeira
+*	podemos incluir operadores lógicos nas expressões
+*	exemplo: if (expressão) {// bloco de código}
+
+estrutura else
+*	a estrutura else pode executar um outro bloco de código, isso acontece quando a expressão if der falsa
+*	em else não inserimos expressões
+*	exemplo: 
+	
+	if(exp) {
+	
+	} else {
+
+	}
+
+if aninhado
+*	podemos também inserir um if dentro de outro
+*	neste caso, o segundo bloco precisa apenas ficar dentro do primeiro if
+*	exemplo:
+	
+	if(exp) {
+
+		if(exp) {
+
+		}
+
+	} 
+
+else if
+* 	com o else if, podemos criar um novo bloco de expressão
+*	este bloco será executado caso o primeiro if seja falso
+*	o else if fica entre o if e o else
+*	exemplo:
+	
+	if(exp) {
+
+	} else if(exp) {
+
+	}
+
+switch
+*	o switch é uma estrutura de condição que, pode substituir o if em alguns casos
+*	podemos adicionar a instrução break para ele não ser mais executado
+*	há a possibilidade também de adicionar a instrução default que é executada caso nehuma condição seja satisfeita
+
+while
+*	o while é uma estrutura de repetição, pode executar um código n vezes
+*	até satisfazer a sua condição
+*	geralmente é necessário um contador para atingir a condição
+*	exemplo:
+	
+	while(condicao) {
+		código
+	}
+
+saindo de loop
+*	podemos sair de um loop while antes do seu fim
+*	para isso, é necessário adicionar a instrução break
+*	após interpretada, o loop será automaticamente finalizado
+*	geralmente inserimos esta instrução em uma confição if
