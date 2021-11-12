@@ -444,3 +444,14 @@ saindo de loop
 *	para isso, é necessário adicionar a instrução break
 *	após interpretada, o loop será automaticamente finalizado
 *	geralmente inserimos esta instrução em uma confição if
+
+loop dentro de loop
+*	como nas estruturas de if, podemos adicionar um loop dentro de outro
+*	o contador deve ser único para que um loop não afete o outro
+*	o loop interno, será executado tantas vezes quanto o loop externo for
+*	em cada uma das suas execuções, serão passadas as suas etapas 
+
+a instrução continue
+*	o continue pula uma execução do loop
+*	ou sejha, quando o interpretador encontrar esta instrução a próxima etapa do loop será executada
+*	novamente costumamos aplicar dentro de uma estrutura de condição
