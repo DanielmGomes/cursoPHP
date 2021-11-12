@@ -453,5 +453,31 @@ loop dentro de loop
 
 a instrução continue
 *	o continue pula uma execução do loop
-*	ou sejha, quando o interpretador encontrar esta instrução a próxima etapa do loop será executada
+*	ou sejha, quando o interpretador encontrar esta instrução a próxima etapa 
+	do loop será executada
 *	novamente costumamos aplicar dentro de uma estrutura de condição
+
+do while
+*	o do while é também uma estrutura de repetição
+*	porém, menos utilizada que o while
+*	a sintaxe é invertida
+*	exemplo:
+	do {
+		codigo
+	}while(condição);
+
+estrutura for
+*	a estrutura for, é com certeza a estrutura de repetição mais utilizada
+*	sua sintaxe é mais organizada em apenas uma linha, aparenta ser mais
+	dificl ao primeiro olhar
+*	exemplo:
+	for(contador; condição; incremento){
+		codigo
+	}
+
+loop infinito
+*	o loop infinito é um erro que pode ser ocasionado quando uma estrutura
+	de repetição não tem uma condição de término que seja possível
+*	exemplo: x > 10 (a variável de referencia tem um decremento, não um incremento)
+*	isso vai fazer o software travar, e pode ser um grande problema caso
+	usuários estejam acessando o mesmo
